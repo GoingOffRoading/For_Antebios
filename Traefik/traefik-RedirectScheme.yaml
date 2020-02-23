@@ -1,0 +1,11 @@
+# Redirect to https
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: test-redirectscheme
+spec:
+  redirectScheme:
+    scheme: https
+
+#documentation: https://docs.traefik.io/v2.1/middlewares/redirectscheme/
+
