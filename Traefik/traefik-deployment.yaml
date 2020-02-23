@@ -32,7 +32,7 @@ spec:
             - --accesslog
             - --entrypoints.http.Address=:80
             - --entrypoints.https.Address=:443
-            - --certificatesresolvers.le.acme.email=cwestlye@gmail.com
+            - --certificatesresolvers.le.acme.email=>>>YOUR-EMAIL-HERE<<<
             - --certificatesresolvers.le.acme.storage=acme.json
             - --certificatesresolvers.le.acme.httpchallenge=true
             - --certificatesresolvers.le.acme.httpchallenge.entrypoint=http
