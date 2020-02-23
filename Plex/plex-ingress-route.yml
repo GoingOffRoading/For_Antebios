@@ -1,0 +1,40 @@
+# Documentation on this pattern:
+# https://docs.traefik.io/v2.0/migration/v1-to-v2/#http-to-https-redirection-is-now-configured-on-routers
+
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: plex-https
+  namespace: default
+spec:
+  entryPoints:
+    - https
+  routes:
+  - match: Host(`WHATEVER-YOU-WANT-HERE-SUBDOMAIN.DOMAIN.com`)
+    kind: Rule
+    services:
+    - name: plex
+      port: 32400
+  tls:
+    certResolver: le
+    options: {}
+
+---
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: plex-http
+  namespace: default
+spec:
+  entryPoints:
+    - http
+  routes:
+    - match: Host(`WHATEVER-YOU-WANT-HERE-SUBDOMAIN.DOMAIN.com`)
+      kind: Rule
+      services:
+        - name: plex
+          port: 32400
+      middlewares:
+        - name: redirect

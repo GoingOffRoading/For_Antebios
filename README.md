@@ -120,3 +120,11 @@ Check node status:
 ## Add worker nodes
 
 Use join token on worker nodes.
+
+## Done
+
+Run:
+
+    kubectl get nodes
+
+If everything reads as ready, proceed to the Traefik directory

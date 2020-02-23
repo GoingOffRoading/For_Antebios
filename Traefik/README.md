@@ -32,3 +32,7 @@ If you wanted to start to use your reverse-proxy, you would setup port forwading
 This is not well documented and is missing from the Traefik guides.  To redirect port 80 traffic to port 443 so that all traffic lands on https:// (instead of the insecure http://), you need to deploy a RedirectSceme:
 
     kubectl apply -f traefik-RedirectScheme.yaml
+
+# Done?
+
+If this worked, go to the Plex directory for the pattern to expose a service to the web
