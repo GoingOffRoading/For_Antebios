@@ -1,7 +1,8 @@
 # Kubernetes
 
-
 This is my terrible documentation on my home Kuberentes cluster
+
+Run Ubunutu on your machines.  Latest version is fine.  Debian likely works but I'm not sure on exactly how commands change from Debian to Ubuntu.
 
 # Node Setup
 
